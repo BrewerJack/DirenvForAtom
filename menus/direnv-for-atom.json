@@ -1,0 +1,26 @@
+{
+  "context-menu": {
+    "atom-text-editor": [
+      {
+        "label": "Toggle direnv-for-atom",
+        "command": "direnv-for-atom:toggle"
+      }
+    ]
+  },
+  "menu": [
+    {
+      "label": "Packages",
+      "submenu": [
+        {
+          "label": "direnv-for-atom",
+          "submenu": [
+            {
+              "label": "Toggle",
+              "command": "direnv-for-atom:toggle"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
