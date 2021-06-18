@@ -2,13 +2,16 @@
   "name": "direnv-for-atom",
   "main": "./lib/direnv-for-atom",
   "version": "0.0.0",
-  "description": "A short description of your package",
+  "description": "Easy to use package that looks for direnv (.envrc) or .env files and imports them for use inside Atom",
   "keywords": [
   ],
   "activationCommands": {
     "atom-workspace": "direnv-for-atom:toggle"
   },
-  "repository": "https://github.com/atom/direnv-for-atom",
+  "activationHooks": [
+      "core:loaded-shell-environment"
+  ],
+  "repository": "https://github.com/BrewerJack/direnv-for-atom",
   "license": "MIT",
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
