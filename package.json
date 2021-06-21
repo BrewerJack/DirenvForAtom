@@ -1,37 +1,49 @@
 {
-  "name": "direnv-for-atom",
-  "main": "./lib/direnv-for-atom",
-  "version": "0.1.0",
-  "description": "Easy to use ENV VAR loader",
-  "keywords": [
-  ],
-  "activationCommands": {
-    "atom-workspace": "direnv-for-atom:toggle"
-  },
-  "activationHooks": [
-      "core:loaded-shell-environment"
-  ],
-  "configSchema": {
-    "envFileOverride": {
-        "default": ".envrc",
-        "type": "string",
-        "description": "Name override for ENV VAR file."
+    "name": "direnv-for-atom",
+    "main": "./lib/direnv-for-atom",
+    "version": "0.1.0",
+    "description": "Easy to use ENV VAR loader",
+    "keywords": [],
+    "activationCommands": {
+        "atom-workspace": "direnv-for-atom:toggle"
     },
-    "envFileFormat": {
-        "type": "string",
-        "default": "direnv",
-        "enum": [
-            {"value": "direnv", "description": "Standard direnv file format."},
-            {"value": "json", "description": "JSON format"}
-        ]
+    "activationHooks": [
+        "core:loaded-shell-environment"
+    ],
+    "configSchema": {
+        "disableNotifications": {
+            "type": "boolean",
+            "default": false
+        },
+        "envFileNameOverride": {
+            "default": ".envrc",
+            "type": "string",
+            "description": "Name override for ENV VAR file."
+        },
+        "envFilePathOverride": {
+            "type": "string",
+            "default": "",
+            "description": "If you want to use a specific file and disable search."
+        },
+        "envFileFormat": {
+            "type": "string",
+            "default": "direnv",
+            "enum": [{
+                    "value": "direnv",
+                    "description": "Standard direnv file format."
+                },
+                {
+                    "value": "json",
+                    "description": "JSON format"
+                }
+            ]
+        }
+    },
+    "dependencies": {
+    },
+    "repository": "https://github.com/BrewerJack/direnv-for-atom",
+    "license": "MIT",
+    "engines": {
+        "atom": ">=1.0.0 <2.0.0"
     }
-  },
-  "dependencies": {
-    "consistent-env": "^1.3.1"
-  },
-  "repository": "https://github.com/BrewerJack/direnv-for-atom",
-  "license": "MIT",
-  "engines": {
-    "atom": ">=1.0.0 <2.0.0"
-  }
 }
